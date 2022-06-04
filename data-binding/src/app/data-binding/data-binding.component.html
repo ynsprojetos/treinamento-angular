@@ -7,4 +7,36 @@
   <p> Curso de Angular e gosto do curso {{cursoAngular && getCurtirCurso()}}</p>
   <img [src]="urlImagem" alt="">
 </article>
+
+<article>
+  <h3> Class e Style Binding</h3>
+  <div >
+    Selecione uma classe:
+    <select #classe (change)="0">
+      <option value="alert alert-success"> Sucesso </option>
+      <option value="alert alert-danger"> Erro </option>
+      <option value="alert alert-info"> Info </option>
+    </select>
+    <br><br>
+
+    <div class="alert {{classe.value}}" role="alert">
+      Esse texto será colorido conforme o ComboBox
+    </div>
+
+    <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert alert-success'">
+      Um simples alerta success. Olha só!
+    </div>
+    <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert alert-danger'">
+      Um simples alerta danger. Olha só!
+    </div>
+    <div class="alert" role="alert" [class.alert-info]="classe.value == 'alert alert-info'">
+      Um simples alerta info. Olha só!
+    </div>
+    <div class="alert" role="alert" [style.display]="classe.value == 'alert alert-info' ? 'block' : 'none'">
+      Testando validação no display
+    </div>
+  </div>
+</article>
+
+
 </section>
