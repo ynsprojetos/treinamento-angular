@@ -1,4 +1,4 @@
-<section class="property-binding">
+<!-- <section class="property-binding">
 <article>
   <h3> Interpolação</h3>
   <p> {{url}} </p>
@@ -37,6 +37,57 @@
     </div>
   </div>
 </article>
+</section> -->
 
+<!-- <article>
+  <h3> Event binding</h3>
+  <div>
+    <button (click)="botaoClicado()" class="btn btn-primary"> Me clique!</button>
+  </div>
+
+  <input type="text" (keyup)="onKeyUp($event)" (keyup.enter)="salvarValor(campoInput.value)" #campoInput>
+
+  <p> VALOR ATUAL:  {{valorAtual}}</p>
+
+  <p> VALOR SALVO:  {{valorSalvo}}</p>
+
+  <br>
+
+  <span (mouseover)="onMouseOverOut()" (mouseout)="onMouseOverOut()" [class.highlight]="isMouseOver"> PASSE O MOUSE SOBRE MIM...</span>
+
+   </article> -->
+
+
+   <!-- <section>
+    <article>
+      <h3> Two-way data binding</h3>
+      <div>
+
+       <input type="text" [(ngModel)]="nome">
+        <p>vc digitou o nome: {{nome}}</p>
+
+      </div>
+
+    </article>
+   </section> -->
+<!--
+   <app-meu-form></app-meu-form> -->
+
+<!-- <section>
+
+  <article>
+   <h3> Input/Output Porperties</h3>
+   <app-curso [nomeCurso]="nomeCurso"></app-curso>
+  </article>
+
+</section> -->
+
+<section>
+
+  <article>
+   <h3> Input/Output Porperties</h3>
+   <contador [valor]="valorInicial" (mudouValor)="onMudouValor($event)"> </contador>
+  </article>
 
 </section>
+
